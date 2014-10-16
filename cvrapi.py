@@ -7,7 +7,7 @@ def cvrapi(cvr, country='dk'):
     request = urllib2.Request(
         url='http://cvrapi.dk/api?search=%d&country=%s' % (cvr, country),
         headers={
-            'User-Agent': 'Robert Engdahl - test cvrapi via Python/Django.'})
+            'User-Agent': 'My project - test cvrapi via Python/Django.'})
     with contextlib.closing(urllib2.urlopen(request)) as response:
         return json.loads(response.read())
 
